@@ -40,6 +40,10 @@ $routes->get('/mahasiswa', 'Pages::mahasiswa');
 $routes->get('/create', 'MahasiswaController::create');
 $routes->get('/index', 'Pages::index');
 $routes->get('(:any)', 'Pages::view/$1');
+$routes->post('/mahasiswa/store', 'MahasiswaController::store');
+$routes->get('/mahasiswa/edit/(:num)', 'MahasiswaController::edit/$1');
+$routes->post('/mahasiswa/update/(:num)', 'MahasiswaController::update/$1');
+$routes->delete('/mahasiswa/delete/(:num)', 'MahasiswaController::delete/$1');
 
 /*
  * --------------------------------------------------------------------
