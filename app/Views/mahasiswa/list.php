@@ -26,12 +26,12 @@
       
       
       <td>
-        <form action="/mahasiswa/delete/<?= $mhs['id'] ?>" method="post">
+        <form action="/delete/<?= $mhs['id'] ?>" method="post">
           <input type="hidden" name="_method" value="DELETE">
           <button type="submit" class="btn btn-danger">Hapus</button>
         </form>
 
-        <form action="/mahasiswa/edit/<?= $mhs['id'] ?>" method="get">
+        <form action="/edit/<?= $mhs['id'] ?>" method="get">
           <input type="hidden" name="_method" value="UPDATE">
           <button type="submit" class="btn btn-warning">Edit</button>
         </form>

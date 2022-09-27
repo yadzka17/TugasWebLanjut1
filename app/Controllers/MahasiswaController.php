@@ -61,10 +61,11 @@ class MahasiswaController extends BaseController
     public function edit($id)
     {
         $mahasiswa_model = new MahasiswaModel();
-        $mahasiswa = $mahasiswa_model->find($id);
+        // $mahasiswa = $mahasiswa_model->find($id);
 
         $data = [
-            'title' => 'Edit Mahasiswa'
+            'title' => 'Edit Mahasiswa',
+            'mahasiswa' => $mahasiswa_model->find($id)
         ];
 
         return 
@@ -82,7 +83,7 @@ class MahasiswaController extends BaseController
         ])){
             return redirect()->to('/mahasiswa/edit/'.$id);
         }
-        $mahasiswa_model = new Mahasiswa();
+        $mahasiswa_model = new MahasiswaModel();
         $data = [
             'npm' => $this->request->getVar('npm'),
             'nama' => $this->request->getVar('nama'),
