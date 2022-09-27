@@ -21,24 +21,10 @@ class Pages extends BaseController
 
         $data['title'] = ucfirst($page); // Capitalize the first letter
 
-        return view('templates/header', $data)
-            . view('pages/'.$page)
-            . view('templates/footer');
+        return view('pages/'.$page, $data);
     }
 
-    public function mahasiswa ()
- {
-    $mahasiswaModel = new MahasiswaModel();
-    $mahasiswa = $mahasiswaModel->findAll();
-   
-    $data = [
-        "title"=>"Mahasiswa",
-        "mahasiswa" => $mahasiswa
-    ];
-    return view('templates/header', $data)
-           . view('mahasiswa/list',$data)
-           . view('templates/footer');
- }
+    
 }
 
  

@@ -13,6 +13,7 @@ class Mahasiswa extends Seeder
                 'npm' => '2017051066',
                 'nama' => 'M. Yadzka Affan Fadhila',
                 'alamat' => 'Jl. Mawar No 21',
+                'deskripsi' => 'Mahasiswa',
                 'created_at' => Time::now(),
                 'updated_at' =>Time::now()
             ],
@@ -20,6 +21,7 @@ class Mahasiswa extends Seeder
                 'npm' => '2017051077',
                 'nama' => 'M. Anton',
                 'alamat' => 'Jl. Mawar No 22',
+                'deskripsi' => 'Mahasiswa',
                 'created_at' => Time::now(),
                 'updated_at' =>Time::now()
             ],
@@ -27,6 +29,7 @@ class Mahasiswa extends Seeder
                 'npm' => '2017051069',
                 'nama' => 'M. Acron',
                 'alamat' => 'Jl. Mawar No 23',
+                'deskripsi' => 'Mahasiswa',
                 'created_at' => Time::now(),
                 'updated_at' =>Time::now()
             ]

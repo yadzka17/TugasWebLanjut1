@@ -1,3 +1,6 @@
+<?= $this->extend('template')?>
+<?= $this->section('content')?>
+
 <a href="/create" type="button" class="btn btn-primary mb-3">Tambah</a>
 <table class="table table-striped">
   <thead>
@@ -6,6 +9,7 @@
       <th scope="col">NPM</th>
       <th scope="col">NAMA</th>
       <th scope="col">Alamat</th>
+      <th scope="col">Deskripsi</th>
       <th scope="col">Created_At</th>
       <th scope="col">Aksi</th>
     </tr>
@@ -16,8 +20,10 @@
       <th scope="row"><?= $no ?></th>
       <td><?= $mhs ['npm'] ?></td>
       <td><?= $mhs ['nama'] ?></td>
+      <td><?= $mhs ['deskripsi'] ?></td>
       <td><?= $mhs ['alamat'] ?></td>
       <td><?= $mhs ['created_at'] ?></td>
+      
       
       <td>
         <form action="/mahasiswa/delete/<?= $mhs['id'] ?>" method="post">
@@ -36,3 +42,5 @@
     endforeach ?>
   </tbody>
 </table>
+
+<?= $this->endSection()?>

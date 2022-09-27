@@ -1,3 +1,6 @@
+<?= $this->extend('template')?>
+<?= $this->section('content')?>
+
 <form class="mx-5" action="/mahasiswa/store" method="post">
   <div class="form-group">
     <label for="npm">NPM Mahasiswa</label>
@@ -8,8 +11,15 @@
     <input type="text" class="form-control" id="nama" name="nama" value="<?= $nama ?>">
   </div>
   <div class="form-group">
-    <label for="alamat">Alamat Mahasiswa</label>
-    <textarea class="form-control" id="alamat" rows="3" name="alamat"><?= $alamat ?></textarea>
-  </div>
+      <label for="deskripsi">Deskripsi Mahasiswa</label>
+      <textarea class="form-control" id="deskripsi" rows="3" name="deskripsi"><?= $mahasiswa['deskripsi'] ?></textarea>
+    </div>
+  <div class="form-group">
+      <label for="alamat">Alamat Mahasiswa</label>
+      <textarea class="form-control" id="alamat" rows="3" name="alamat"><?= $mahasiswa['alamat'] ?></textarea>
+    </div>
+    
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<?= $this->endSection()?>
